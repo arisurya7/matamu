@@ -1,224 +1,347 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
+    <!-- Bootsrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
     <!-- Google Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-    
+
     <!-- Style CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 
-    <!-- Bootsrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    
+    <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/fe118aecdc.js" crossorigin="anonymous"></script>
 
+    <!-- Aos Animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Matamu</title>
 </head>
-<body>
 
+<body>
+    <!-- Navmbar -->
     <nav class="navbar navbar-expand-lg navbar-custom  fixed-top shadow-sm">
         <div class="container">
-          <a class="navbar-brand" href="#"><img src="assets/img/nav_icon.png" alt=""></a>         
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <ul class="navbar-nav ms-auto flex-nowrap">
-                <li class="nav-item">
-                    <a href="#" class="nav-link m-2 menu-item nav-active">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link m-2 menu-item">Research</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link m-2 menu-item">Product</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link m-2 menu-item">Contact</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link m-2 menu-item">Login</a>
-                </li>
-            </ul>
-          </div>
+            <a class="navbar-brand" href="#"><img src="assets/img/nav_icon.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <ul class="navbar-nav ms-auto flex-nowrap">
+                    <li class="nav-item home nav-active">
+                        <a href="#home" class="nav-link m-2 menu-item">Home</a>
+                    </li>
+                    <li class="nav-item research">
+                        <a href="#research" class="nav-link m-2 menu-item">Research</a>
+                    </li>
+                    <li class="nav-item product">
+                        <a href="#product" class="nav-link m-2 menu-item">Product</a>
+                    </li>
+                    <li class="nav-item contact">
+                        <a href="#contact" class="nav-link m-2 menu-item">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#login" class="nav-link m-2 menu-item" data-bs-toggle="modal"
+                            data-bs-target="#modal-login">Login</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
-   
-    
-    <section class="header">
+
+    <!-- Floating Whatsapp -->
+    <a href="https://api.whatsapp.com/send?phone=081111111111text=Hallo%20Admin%20,%20Saya%20ingin%20bertanya%20..."
+        class="float-whatsapp" target="_blank"><i class="fa fa-whatsapp icon-float-whatsapp"></i></a>
+
+    <!-- Cover Header -->
+    <section class="header" id="home">
         <div class="container">
-            <div class="row">
-                <div class="col-sm align-self-center">
+            <div class="row text-header">
+                <div class="col-sm align-self-center" data-aos="fade-right">
                     <h1 class="color-primary-custom">Lorem Ipsum Orde Lirum Irami</h1>
-                    <p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id commodo diam. Suspendisse iaculis urna lacus, ac rhoncus diam suscipit ut. Vivamus vel auctor lacus, quis venenatis ex.</p>
-                    <button class="btn rounded-pill btn-outline-custom-primary mt-3"> More Info</button>
+                    <p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id commodo diam.
+                        Suspendisse iaculis urna lacus, ac rhoncus diam suscipit ut. Vivamus vel auctor lacus, quis
+                        venenatis ex.</p>
+                    <a href="#whatinfo" class="btn rounded-pill btn-outline-custom-primary mt-3"> More Info</a>
                 </div>
-                <div class="col-sm">
-                    <img  class="vector_header" src="assets/img/header_vector.png" alt="header vector">
+                <div class="col-sm" data-aos="fade-left">
+                    <img class="vector_header" src="assets/img/header_vector.png" alt="header vector">
                 </div>
             </div>
-        </div>        
+        </div>
     </section>
 
-    <section class="whatinfo">
+    <!-- What Info -->
+    <section class="whatinfo pb-5 pt-5" id="whatinfo">
         <div class="container">
             <div class="row">
-                <div class="col-sm align-self-center">
-                    <h2>Apa Itu Matamu</h2>
-                    <hr>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id commodo diam. Suspendisse iaculis urna lacus, ac rhoncus diam suscipit ut. Vivamus vel auctor lacus, quis venenatis ex.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id commodo diam. Suspendisse iaculis urna lacus, ac rhoncus diam suscipit ut. Vivamus vel auctor lacus, quis venenatis ex.</p>
+                <div class="col-sm align-self-center text-whatinfo" data-aos="fade-up">
+                    <h1>Apa Itu <span class="mata">Mata</span><span class="mu">mu</span></h1>
+                    <hr class="hr-left rounded-pill">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id commodo diam. Suspendisse
+                        iaculis urna lacus, ac rhoncus diam suscipit ut. Vivamus vel auctor lacus, quis venenatis ex.
+                    </p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id commodo diam. Suspendisse
+                        iaculis urna lacus, ac rhoncus diam suscipit ut. Vivamus vel auctor lacus, quis venenatis ex.
+                    </p>
                 </div>
-                <div class="col-sm">
+                <div class="col-sm img-whatinfo text-center" data-aos="fade-up">
                     <img class="vector_question" src="assets/img/vector_question.png" alt="vector question">
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="whyinfo bg-secondary-custom pb-5 pt-5">
+    <!-- Why Info -->
+    <section class="whyinfo bg-secondary-custom pb-5 pt-5" id="whyinfo">
         <div class="container">
-            <div class="row text-center">
-                <h2>Kenapa Matamu</h2>
-                <hr>
+            <div class="row text-center pb-5" data-aos="fade-up">
+                <h1 class="text-dark pb-4 pt-4">Kenapa Matamu</h1>
+                <hr class="hr-center rounded-pill ">
             </div>
-            <div class="row justify-content-center">
-                <div class="col-sm-1">
-                    <i class="fas fa-pencil-ruler display-5 p-3 rounded-circle bg-light"></i>
+            <div class="row justify-content-center mt-5 mb-5" data-aos="fade-up">
+                <div class="col-lg-2 text-center color-primary-custom icon-list">
+                    <i class="fas fa-shield-alt display-5 p-4 rounded-circle bg-light"></i>
                 </div>
-                <div class="col-sm-9">
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi ex ea eligendi provident, fugit numquam modi asperiores accusantium praesentium omnis eum labore distinctio, nisi iure dolorem inventore ut porro! Aliquid.</p>
+                <div class="col-lg-9 align-self-center">
+                    <h5 class="fw-bolder">Lorem ipsum dolor sit amet</h5>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi ex ea eligendi provident,
+                        fugit numquam modi asperiores accusantium praesentium omnis eum labore distinctio, nisi iure
+                        dolorem inventore ut porro! Aliquid.</p>
                 </div>
             </div>
-            <div class="row justify-content-center">
-                <div class="col-sm-1">
-                    <i class="fas fa-pencil-ruler display-5 p-3 rounded-circle bg-light"></i>
+            <div class="row justify-content-center mt-5 mb-5" data-aos="fade-up">
+                <div class="col-lg-2 text-center color-primary-custom icon-list">
+                    <i class="fas fa-tachometer-alt display-5 p-4 rounded-circle bg-light"></i>
                 </div>
-                <div class="col-sm-9">
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi ex ea eligendi provident, fugit numquam modi asperiores accusantium praesentium omnis eum labore distinctio, nisi iure dolorem inventore ut porro! Aliquid.</p>
+                <div class="col-lg-9 align-self-center">
+                    <h5 class="fw-bolder">Lorem ipsum dolor sit amet</h5>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi ex ea eligendi provident,
+                        fugit numquam modi asperiores accusantium praesentium omnis eum labore distinctio, nisi iure
+                        dolorem inventore ut porro! Aliquid.</p>
                 </div>
-            </div><div class="row justify-content-center">
-                <div class="col-sm-1">
-                    <i class="fas fa-pencil-ruler display-5 p-3 rounded-circle bg-light"></i>
+            </div>
+            <div class="row justify-content-center mt-5 mb-5" data-aos="fade-up">
+                <div class="col-lg-2 text-center color-primary-custom icon-list">
+                    <i class="fas fa-recycle display-5 p-4 rounded-circle bg-light"></i>
                 </div>
-                <div class="col-sm-9">
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi ex ea eligendi provident, fugit numquam modi asperiores accusantium praesentium omnis eum labore distinctio, nisi iure dolorem inventore ut porro! Aliquid.</p>
+                <div class="col-lg-9 align-self-center">
+                    <h5 class="fw-bolder">Lorem ipsum dolor sit amet</h5>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi ex ea eligendi provident,
+                        fugit numquam modi asperiores accusantium praesentium omnis eum labore distinctio, nisi iure
+                        dolorem inventore ut porro! Aliquid.</p>
                 </div>
             </div>
         </div>
     </section>
-    
-    <section class="research">
+
+    <!-- Research -->
+    <section class="research pb-5 pt-5" id="research">
         <div class="container">
-            <div class="row">
-                <div class="col-sm align-self-center">
-                    <h2>Research Kami</h2>
-                    <hr>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id commodo diam. Suspendisse iaculis urna lacus, ac rhoncus diam suscipit ut. Vivamus vel auctor lacus, quis venenatis ex.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id commodo diam. Suspendisse iaculis urna lacus, ac rhoncus diam suscipit ut. Vivamus vel auctor lacus, quis venenatis ex.</p>
+            <div class="row" data-aos="fade-up">
+                <div class="col-sm align-self-center text-research">
+                    <h1 class="color-primary-custom">Research Kami</h1>
+                    <hr class="hr-left rounded-pill">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id commodo diam. Suspendisse
+                        iaculis urna lacus, ac rhoncus diam suscipit ut. Vivamus vel auctor lacus, quis venenatis ex.
+                    </p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id commodo diam. Suspendisse
+                        iaculis urna lacus, ac rhoncus diam suscipit ut. Vivamus vel auctor lacus, quis venenatis ex.
+                    </p>
+                    <a href="$" class="btn rounded-pill btn-custom-primary mt-3 mb-2">Detail</a>
                 </div>
-                <div class="col-sm">
+                <div class="col-sm text-center">
                     <img class="vector_research" src="assets/img/vector_research.png" alt="vector research">
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="product bg-primary-custom pt-5 pb-5">
+    <!-- Product -->
+    <section class="product bg-primary-custom pt-5 pb-5" id="product">
         <div class="container">
-            <div class="row">
+            <div class="row pb-5" data-aos="fade-up">
                 <div class="col text-center">
-                    <h2 class="text-light">Produk Kami</h2>
-                    <hr>
+                    <h1 class="text-light pb-4 pt-4">Produk Kami</h1>
+                    <hr class="hr-center-white rounded-fill">
                 </div>
             </div>
-            <div class="row product1 pt-4">
-                <div class="col-sm-6">
-                    <div class="example-box bg-light" style="width: 80%; height: 100%;"></div>
+            <div class="row product1 pt-4" data-aos="fade-up">
+                <div class="col-sm-6 text-center">
+                    <img src="assets/img/robot.jpg" class="img-product img-rounded " alt="img product1"
+                        style="width:80%">
                 </div>
-                <div class="col-sm-6 text-light">
-                    <h3>Deteksi KTP</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, architecto esse amet inventore laborum ullam ipsum mollitia, eveniet distinctio dolores assumenda soluta quas aspernatur impedit odit, sint culpa accusamus quia?</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam nemo accusantium quidem, corporis est hic, autem provident ut quae omnis veniam adipisci. Hic veniam dolor nulla unde provident delectus molestias!</p>
+                <div class="col-sm-6 text-light text-product">
+                    <h2>Deteksi KTP</h2>
+                    <br>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, architecto esse amet inventore
+                        laborum ullam ipsum mollitia, eveniet distinctio dolores assumenda soluta quas aspernatur
+                        impedit odit, sint culpa accusamus quia?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam nemo accusantium quidem,
+                        corporis est hic, autem provident ut quae omnis veniam adipisci. Hic veniam dolor nulla unde
+                        provident delectus molestias!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam nemo accusantium quidem,
+                        corporis est hic, autem provident ut quae omnis veniam adipisci. Hic veniam dolor nulla unde
+                        provident delectus molestias!</p>
                 </div>
             </div>
-            <div class="row product2 pt-4">
-                <div class="col-sm-6 text-light">
-                    <h3>Deteksi BPJS</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, architecto esse amet inventore laborum ullam ipsum mollitia, eveniet distinctio dolores assumenda soluta quas aspernatur impedit odit, sint culpa accusamus quia?</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam nemo accusantium quidem, corporis est hic, autem provident ut quae omnis veniam adipisci. Hic veniam dolor nulla unde provident delectus molestias!</p>
+            <div class="row product2 pt-5 pb-5" data-aos="fade-up">
+                <div class="col-sm-6 text-light text-product">
+                    <h2>Deteksi BPJS</h2>
+                    <br>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, architecto esse amet inventore
+                        laborum ullam ipsum mollitia, eveniet distinctio dolores assumenda soluta quas aspernatur
+                        impedit odit, sint culpa accusamus quia?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam nemo accusantium quidem,
+                        corporis est hic, autem provident ut quae omnis veniam adipisci. Hic veniam dolor nulla unde
+                        provident delectus molestias!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam nemo accusantium quidem,
+                        corporis est hic, autem provident ut quae omnis veniam adipisci. Hic veniam dolor nulla unde
+                        provident delectus molestias!</p>
                 </div>
-                <div class="col-sm-6">
-                    <div class="example-box bg-light" style="width: 80%; height: 100%;"></div>
+                <div class="col-sm-6 text-center">
+                    <img src="assets/img/robot.jpg" class="img-product img-rounded" alt="img product1"
+                        style="width:80%">
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="contact pt-5 pb-5">
+    <!-- Contact -->
+    <section class="contact pt-5 pb-5" id="contact">
         <div class="container">
-            <div class="row">
-                <div class="col">
-                    <h2>Contact</h2>
-                    <hr width="100">
+            <div class="row justify-content-center" data-aos="fade-up">
+                <div class="col-sm-5 information-contact">
+                    <h1 class="color-primary-custom">Contact</h1>
+                    <hr class="hr-left rounded-pill">
+                    <p class="color-primary-custom"><i class="fas fa-map-marked-alt icon-contact"></i> Jalan Palawa XIII
+                        No. 8 , Denpasar, Bali</p>
+                    <p class="color-primary-custom"><i class="fas fa-phone-alt icon-contact"></i>+628135553xxxx</p>
+                    <p class="color-primary-custom"><i class="fas fa-envelope icon-contact"></i>info@matamu.id</p>
+                    <h4 class="color-secondary-custom pt-4">Media Sosial</h4>
+                    <p class="text-light mt-1 icon-medsos">
+                        <a href="https://instagram.com/" target="_blank" class="text-light"><i
+                                class="fab fa-instagram p-2 bg-secondary-custom m-1 rounded-circle"></i></a>
+
+                        <a href="https://facebook.com/" target="_blank" class="text-light"><i
+                                class="fab fa-facebook p-2 bg-secondary-custom m-1 rounded-circle"></i></a>
+
+                        <a href="https://twitter.com/" target="_blank" class="text-light"><i
+                                class="fab fa-twitter p-2 bg-secondary-custom m-1 rounded-circle"></i></p></a>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-sm">
-                    <p><i class="fas fa-map-marked-alt"></i> Jalan Palawa XIII No. 8 , Denpasar, Bali</p>
-                    <p><i class="fas fa-phone-alt"></i>+628135553xxxx</p>
-                    <p><i class="fas fa-envelope"></i>info@matamu.id</p>
-                    <p>Media sosial</p>
-                    <p><i class="fab fa-instagram"></i> <i class="fab fa-facebook-f"></i> <i class="fab fa-twitter"></i></p>
-                </div>
-                <div class="col-sm">
-                    <form action="">
+                <div class="col-sm-6">
+                    <form action="" class="form-contact">
+                        <div class="row pt-5"></div>
+                        <div class="row pb-4">
+                            <div class="col">
+                                <label for="fullname" class="form-label">Full Name</label>
+                                <input type="text" class="form-control" name="fullname" id="fullname"
+                                    placeholder="Full Name">
+                            </div>
+                            <div class="col">
+                                <label for="email_contact" class="form-label">Email</label>
+                                <input type="email" class="form-control" name="email_contact" id="email_contact"
+                                    placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="row pb-4">
+                            <div class="col">
+                                <label for="telp" class="form-label">Phone Number</label>
+                                <input type="text" class="form-control" name="telp" id="telp"
+                                    placeholder="Phone Number">
+                            </div>
+                            <div class="col">
+                                <label for="subject" class="form-label">Subject</label>
+                                <input type="text" class="form-control" name="subject" id="subject"
+                                    placeholder="Subject">
+                            </div>
+                        </div>
                         <div class="row">
                             <div class="col">
-                              <label for="fullname" class="form-label">Full Name</label>
-                              <input type="text" class="form-control" name="fullname" id="fullname" placeholder="Full Name">
-                            </div>
-                            <div class="col">
-                              <label for="email" class="form-label">Email</label>
-                              <input type="email" class="form-control" name="email" id="email" placeholder="Email">
-                            </div>
-                          </div>
-                          <div class="row">
-                            <div class="col">
-                              <label for="telp" class="form-label">Phone Number</label>
-                              <input type="text" class="form-control" name="telp" id="telp" placeholder="Phone Number">
-                            </div>
-                            <div class="col">
-                              <label for="subject" class="form-label">Subject</label>
-                              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject">
-                            </div>
-                          </div>
-                          <div class="row">
-                              <div class="col">
                                 <label for="message" class="form-label">Message</label>
-                                <textarea name="message" id="message" class="form-control" cols="30" rows="10">Message</textarea>
-                              </div>
-                          </div>
-                        <button type="submit" class="btn rounded-pill btn-outline-custom-primary mt-3">Contact Us</button>
+                                <textarea name="message" id="message" class="form-control" cols="30"
+                                    rows="10">Message</textarea>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col button-contact">
+                                <button type="submit"
+                                    class="btn rounded-pill btn-outline-custom-primary mt-3 mb-5 ">Contact Us</button>
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="bg-primary-custom">
-        <p class="text-center text-light p-3">&copy COPYRIGHT 2021. MATAMU</p>
+        <p class="text-center text-light pt-3">&copy COPYRIGHT 2021. MATAMU</p>
     </footer>
 
 
+    <!-- Modal Login -->
+    <div class="modal fade" id="modal-login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title text-center w-100" id="exampleModalLabel">Login</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <form action="">
+                        <div class="row pb-3">
+                            <div class="col">
+                                <input type="email" class="form-control rounded-pill" name="email" id="email"
+                                    placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="row pb-1">
+                            <div class="col">
+                                <input type="password" class="form-control rounded-pill" name="password" id="password"
+                                    placeholder="Password">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn rounded-pill btn-custom-primary mt-3 mb-2">Login</button>
+                        <p class="text-center mb-0">Belum memiliki akun ? <a href="#"><span
+                                    class="color-primary-custom fw-bold">Daftar di sini</span></a></p>
+                        <p class=" text-center">Lupa kata sandi ? <a href="#"><span
+                                    class="color-primary-custom fw-bold">Pulihkan di sini </span></a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <!-- Separate Popper and Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-   
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
+    </script>
+
+    <!-- My Script -->
+    <script src="assets/js/myscript.js"></script>
+
+    <!-- Aos Animation -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 200,
+            duration: 1200
+        });
+    </script>
+
 </body>
+
 </html>
